@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command + Z Sorry Card - Inside</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .card {
+            width: 800px;  /* Increased card size */
+            height: 600px;  /* Increased card size */
+            border: 5px solid #e0e0e0;
+            perspective: 1000px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .inside-content {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        .left-page {
+            background-color: #ffffff;
+            padding: 30px;
+            flex: 1;
+            overflow-y: scroll;
+            border-right: 2px solid #e0e0e0;
+        }
+
+        .left-page p {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .right-page {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .video-box {
+            width: 90%;
+            height: 90%;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .bounce {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .buttons {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        button {
+            margin: 0 15px;
+            padding: 15px 30px;
+            background-color: #ff6f61;
+            color: #fff;
+            border: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff3d31;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card">
+            <div class="inside-content">
+                <!-- Left page (Letter) -->
+                <div class="left-page">
+                    <p>
+                        <strong>My Love, My Heart, My Everything,</strong><br><br>
+                        Though you have already graced me with your forgiveness, I find my heart still aching to express how deeply sorry I am for the storm I brought into our calm. Forgiveness is a gift I will treasure, but I must confess that my soul longs to paint for you the full depth of my remorse and love, more tenderly and vividly than I could before.<br><br>
+                        I cannot help but see you in every moment of my day—the light in your eyes, the softness of your voice, the way your presence lifts me beyond the ordinary. You are the sun in my universe, and yet, in a moment of thoughtless anger, I allowed a cloud to obscure that light. I am sorry, more than words can truly express, for letting my emotions hurt the one who is my greatest source of joy.<br><br>
+                        In you, I have found a love so deep, so pure, that it feels like a symphony playing in my soul. And yet, I let a single discordant note interrupt the harmony we share. My anger was brief, but its effect felt eternal in that moment. You, who deserve only the gentlest of touches, were met with a side of me that I am not proud of. I promise you, my love, that I will never stop working to master the storms inside me, to keep them far from the shores of your heart.<br><br>
+                        I see now, more clearly than ever, how fragile and precious this love is—like a delicate flower that blooms in the garden of our hearts. And I vow to nurture it with the patience and tenderness it deserves, for I cannot bear the thought of another day where I bring anything but peace to your life.<br><br>
+                        Your love is the soft moonlight that guides me through my darkest hours, the steady hand that keeps me grounded when my soul feels adrift. You are the poetry in my life, the melody in my heart, and I want to write our story not with angry words, but with verses filled with love, compassion, and understanding.<br><br>
+                        I am endlessly grateful for your forgiveness, yet I feel compelled to continue proving my love in actions, not just words. I want to show you with every breath I take, with every touch, that you are cherished beyond measure, that you are the center of my universe, and that I will never again allow my anger to cast even the slightest shadow over the beautiful light you bring into my world.<br><br>
+                        Let me wrap you in the warmth of my love, let me offer you a heart that beats only for you, a soul that seeks to protect and honor you in every way. For without you, the world feels colorless, and with you, it blooms into a masterpiece of beauty and joy. I want to spend the rest of my days ensuring that you never feel less than adored, cherished, and loved beyond measure.<br><br>
+                        <em>Yours forever,<br>Dumbass.</em>
+                    </p>
+                </div>
+
+                <!-- Right page (MOV File with Bounce Effect) -->
+                <div class="right-page">
+                    <!-- Display .mov file with bounce effect -->
+                    <div class="video-box">
+                        <video id="mov-file" autoplay loop muted>
+                            <source src="images/lp_image.mov" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button to go back to the front page -->
+        <div class="buttons">
+            <button onclick="showFront()">Back to Front</button>
+        </div>
+
+    <script>
+        function showFront() {
+            window.location.href = "index.html";  // Navigates back to the front page
+        }
+
+        // Add bounce animation to .mov file
+        const videoElement = document.getElementById('mov-file');
+        videoElement.classList.add('bounce');
+    </script>
+</body>
+</html>

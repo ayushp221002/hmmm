@@ -1,0 +1,109 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.card {
+    width: 800px;  /* Increased card size */
+    height: 600px;  /* Increased card size */
+    border: 5px solid #e0e0e0;  /* Added border for visual separation */
+    perspective: 1000px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.inside-content, .front-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.left-page {
+    background-color: #ffffff;
+    padding: 30px;
+    flex: 1;
+    overflow-y: scroll;
+    border-right: 2px solid #e0e0e0;
+}
+
+.left-page p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.right-page {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.video-box {
+    width: 100%;
+    height: 100%;
+}
+
+.front {
+    z-index: 2;
+    background-color: #fff;
+    color: #000;
+    transform: rotateY(0deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.front-image {
+    max-width: 80%; /* Keep image size proportional */
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    margin: 0 15px;
+    padding: 15px 30px;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff3d31;
+    transform: scale(1.05);
+}
